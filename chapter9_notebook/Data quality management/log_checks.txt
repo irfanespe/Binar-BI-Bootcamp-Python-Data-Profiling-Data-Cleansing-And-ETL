@@ -1,0 +1,266 @@
+
+Test Log 2024-01-28INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 2/3 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   | 1/3 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 1 failures. 0 warnings. 0 errors. 2 pass. 
+
+Test Log 2024-01-28INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 2/3 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   | 1/3 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 1 failures. 0 warnings. 0 errors. 2 pass. 
+
+Test Log 2024-01-28INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 2/3 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   | 1/3 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 1 failures. 0 warnings. 0 errors. 2 pass. 
+
+Test Log 2024-01-28 /nINFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 2/3 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   | 1/3 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 1 failures. 0 warnings. 0 errors. 2 pass. 
+
+Test Log 2024-01-28 
+INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 2/3 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   | 1/3 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 1 failures. 0 warnings. 0 errors. 2 pass. 
+
+-----------------------------
+Test Log 2024-01-28 
+-----------------------------
+INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 2/3 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   | 1/3 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 1 failures. 0 warnings. 0 errors. 2 pass. 
+
+-----------------------------
+Test Log 2024-01-28 
+-----------------------------
+INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 2/3 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   | 1/3 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 1 failures. 0 warnings. 0 errors. 2 pass. 
+
+-----------------------------
+Test Log 2024-01-28 
+-----------------------------
+INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 2/3 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   | 1/3 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 1 failures. 0 warnings. 0 errors. 2 pass.
+DEBUG  | Reading SodaCL file "checks.yml"
+DEBUG  | Skipping duplicate file addition for checks.yml
+DEBUG  | Scan execution starts
+DEBUG  | Query postgresdb.hotel_reservations_csv.aggregation[0]:
+SELECT 
+  COUNT(*),
+  COUNT(CASE WHEN booking_id IS NULL THEN 1 END) 
+FROM ecommerce_raw.hotel_reservations_csv
+DEBUG  | Query postgresdb.hotel_reservations_csv.booking_id.duplicate_count:
+
+WITH frequencies AS (
+    SELECT COUNT(*) AS frequency
+    FROM ecommerce_raw.hotel_reservations_csv
+    WHERE booking_id IS NOT NULL
+    GROUP BY booking_id)
+SELECT COUNT(*)
+FROM frequencies
+WHERE frequency > 1
+DEBUG  | Query postgresdb.booking_id.failed_rows[duplicate_count]:
+
+WITH frequencies AS (
+    SELECT booking_id
+    FROM ecommerce_raw.hotel_reservations_csv
+    WHERE booking_id IS NOT NULL
+    GROUP BY booking_id
+    HAVING COUNT(*) > 1)
+SELECT main.*
+FROM ecommerce_raw.hotel_reservations_csv main
+JOIN frequencies ON main.booking_id = frequencies.booking_id
+
+LIMIT 100
+INFO   | Using DefaultSampler
+DEBUG  | Query postgresdb.hotel_reservations_csv.duplicate_count[booking_id].failed_rows.aggregated:
+
+WITH frequencies AS (
+    SELECT booking_id, COUNT(*) AS frequency
+    FROM ecommerce_raw.hotel_reservations_csv
+    WHERE booking_id IS NOT NULL
+    GROUP BY booking_id)
+SELECT *
+FROM frequencies
+WHERE frequency > 1
+ORDER BY frequency DESC
+LIMIT 100
+INFO   | Scan summary:
+DEBUG  | 8/8 queries OK
+DEBUG  |   postgresdb.hotel_reservations_csv.aggregation[0] [OK] 0:00:00.006380
+DEBUG  |   postgresdb.hotel_reservations_csv.booking_id.duplicate_count [OK] 0:00:00.025145
+DEBUG  |   postgresdb.booking_id.failed_rows[duplicate_count] [OK] 0:00:00.040220
+DEBUG  |   postgresdb.hotel_reservations_csv.duplicate_count[booking_id].failed_rows.aggregated [OK] 0:00:00.027044
+DEBUG  |   postgresdb.hotel_reservations_csv.aggregation[0] [OK] 0:00:00.006380
+DEBUG  |   postgresdb.hotel_reservations_csv.booking_id.duplicate_count [OK] 0:00:00.025145
+DEBUG  |   postgresdb.booking_id.failed_rows[duplicate_count] [OK] 0:00:00.037892
+DEBUG  |   postgresdb.hotel_reservations_csv.duplicate_count[booking_id].failed_rows.aggregated [OK] 0:00:00.027653
+INFO   | 4/6 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |         check_value: 36281
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   |         check_value: 0
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |         check_value: 36281
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   |         check_value: 0
+INFO   | 2/6 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 2 failures. 0 warnings. 0 errors. 4 pass.
+DEBUG  | Reading SodaCL file "checks.yml"
+DEBUG  | Skipping duplicate file addition for checks.yml
+DEBUG  | Scan execution starts
+DEBUG  | Query postgresdb.hotel_reservations_csv.aggregation[0]:
+SELECT 
+  COUNT(*),
+  COUNT(CASE WHEN booking_id IS NULL THEN 1 END) 
+FROM ecommerce_raw.hotel_reservations_csv
+DEBUG  | Query postgresdb.hotel_reservations_csv.booking_id.duplicate_count:
+
+WITH frequencies AS (
+    SELECT COUNT(*) AS frequency
+    FROM ecommerce_raw.hotel_reservations_csv
+    WHERE booking_id IS NOT NULL
+    GROUP BY booking_id)
+SELECT COUNT(*)
+FROM frequencies
+WHERE frequency > 1
+DEBUG  | Query postgresdb.booking_id.failed_rows[duplicate_count]:
+
+WITH frequencies AS (
+    SELECT booking_id
+    FROM ecommerce_raw.hotel_reservations_csv
+    WHERE booking_id IS NOT NULL
+    GROUP BY booking_id
+    HAVING COUNT(*) > 1)
+SELECT main.*
+FROM ecommerce_raw.hotel_reservations_csv main
+JOIN frequencies ON main.booking_id = frequencies.booking_id
+
+LIMIT 100
+INFO   | Using DefaultSampler
+DEBUG  | Query postgresdb.hotel_reservations_csv.duplicate_count[booking_id].failed_rows.aggregated:
+
+WITH frequencies AS (
+    SELECT booking_id, COUNT(*) AS frequency
+    FROM ecommerce_raw.hotel_reservations_csv
+    WHERE booking_id IS NOT NULL
+    GROUP BY booking_id)
+SELECT *
+FROM frequencies
+WHERE frequency > 1
+ORDER BY frequency DESC
+LIMIT 100
+INFO   | Scan summary:
+DEBUG  | 12/12 queries OK
+DEBUG  |   postgresdb.hotel_reservations_csv.aggregation[0] [OK] 0:00:00.008543
+DEBUG  |   postgresdb.hotel_reservations_csv.booking_id.duplicate_count [OK] 0:00:00.026039
+DEBUG  |   postgresdb.booking_id.failed_rows[duplicate_count] [OK] 0:00:00.040220
+DEBUG  |   postgresdb.hotel_reservations_csv.duplicate_count[booking_id].failed_rows.aggregated [OK] 0:00:00.027044
+DEBUG  |   postgresdb.hotel_reservations_csv.aggregation[0] [OK] 0:00:00.008543
+DEBUG  |   postgresdb.hotel_reservations_csv.booking_id.duplicate_count [OK] 0:00:00.026039
+DEBUG  |   postgresdb.booking_id.failed_rows[duplicate_count] [OK] 0:00:00.037892
+DEBUG  |   postgresdb.hotel_reservations_csv.duplicate_count[booking_id].failed_rows.aggregated [OK] 0:00:00.027653
+DEBUG  |   postgresdb.hotel_reservations_csv.aggregation[0] [OK] 0:00:00.008543
+DEBUG  |   postgresdb.hotel_reservations_csv.booking_id.duplicate_count [OK] 0:00:00.026039
+DEBUG  |   postgresdb.booking_id.failed_rows[duplicate_count] [OK] 0:00:00.036972
+DEBUG  |   postgresdb.hotel_reservations_csv.duplicate_count[booking_id].failed_rows.aggregated [OK] 0:00:00.026524
+INFO   | 6/9 checks PASSED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |         check_value: 36281
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   |         check_value: 0
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |         check_value: 36281
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   |         check_value: 0
+INFO   |       row_count > 0 [checks.yml] [PASSED]
+INFO   |         check_value: 36281
+INFO   |       missing_count(booking_id) = 0 [checks.yml] [PASSED]
+INFO   |         check_value: 0
+INFO   | 3/9 checks FAILED: 
+INFO   |     hotel_reservations_csv in postgresdb
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   |       duplicate_count(booking_id) = 0 [checks.yml] [FAILED]
+INFO   |         check_value: 6
+INFO   | Oops! 3 failures. 0 warnings. 0 errors. 6 pass. 

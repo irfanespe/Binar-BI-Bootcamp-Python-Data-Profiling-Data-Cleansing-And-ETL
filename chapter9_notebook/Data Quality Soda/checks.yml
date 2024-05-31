@@ -1,0 +1,11 @@
+# apa aja yang mau dicek
+
+#checks for nama_table:
+checks for customers:
+# list of test
+  # duplication test
+  - duplicate_count(customer_id) = 0 # harapan kita duplicate colomn = 0, jika tidak error
+  # completeness test
+  - missing_count(customer_id) = 0 # kondisi ideal value yang null = 0, jika tidak terpenuhi error
+  - missing_count(phone) = 0
+  - missing_count(fax) = 0 
