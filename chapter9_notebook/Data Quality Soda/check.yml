@@ -1,0 +1,25 @@
+# define table yang mau di cek
+# format -> checks for nama_table:
+checks for orders:
+    # check duplication di kolom order_id -> duplicate_count(nama_kolom) = angka_yang_diperbolehkan
+    - duplicate_count(order_id) = 0 # ga boleh ada duplikasi di kolom order_id
+    - missing_count(order_id) = 0 # ga boleh ada null di kolom order_id
+    # test with warning and failed
+    - missing_percent(ship_postal_code):
+        warn: when between 2% and 5%
+        fail: when > 5% 
+    # check values is valid based on comparison to dim tables
+    - values in (customer_id) must exist in customers (customer_id)
+    # check using custom query
+    - out_date_range = 0:
+        out_date_range query: |
+          SELECT COUNT(*)
+          FROM orders
+          WHERE order_date <= '2000-01-01'
+          OR order_date >= '2050-12-31'
+
+checks for shippers:
+    - missing_count(company_name) = 0
+    # validity check using writen valid values
+    - invalid_count(company_name) = 0:
+        valid values: [Speedy Express]

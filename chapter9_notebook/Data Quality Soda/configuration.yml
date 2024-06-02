@@ -1,8 +1,9 @@
-data_source db_postgres:
+# identify the data source
+data_source postgresdb:
   type: postgres
   connection:
     host: localhost
     username: postgres
     password: admin
   database: binar_bi
-  schema: w3s sample
+  schema: w3s_sample

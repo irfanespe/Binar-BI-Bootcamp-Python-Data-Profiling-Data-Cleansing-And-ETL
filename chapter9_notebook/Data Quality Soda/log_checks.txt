@@ -1,0 +1,142 @@
+
+-----------------------------
+
+-----------------------------
+
+-----------------------------
+Test Log 2024-01-28 
+-----------------------------
+INFO   | Soda Core 3.3.5
+ERROR  | Skipping unsupported check configuration: invalid_values | line=15,col=9 in check.yml | https://go.soda.io/metric_check_configurations
+WARNING| Counting invalid without valid or invalid specification does not make sense. ("invalid_count(company_name) = 0" @ line=14,col=7 in check.yml)
+INFO   | Using DefaultSampler
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 3/5 checks PASSED: 
+INFO   |     orders in postgresdb
+INFO   |       duplicate_count(order_id) = 0 [PASSED]
+INFO   |       missing_count(order_id) = 0 [PASSED]
+INFO   |     shippers in postgresdb
+INFO   |       invalid_count(company_name) = 0 [PASSED]
+INFO   | 1/5 checks WARNED: 
+INFO   |     orders in postgresdb
+INFO   |       missing_percent(ship_postal_code) warn when between 2% and 5% fail when > 5% [WARNED]
+INFO   |         check_value: 2.6
+INFO   |         row_count: 654
+INFO   |         missing_count: 17
+INFO   | 1/5 checks FAILED: 
+INFO   |     orders in postgresdb
+INFO   |       missing_count(customer_id) = 0 [FAILED]
+INFO   |         check_value: 1
+INFO   | 1 errors.
+INFO   | Oops! 1 error. 1 failure. 1 warning. 3 pass. 
+
+-----------------------------
+Test Log 2024-01-29 
+-----------------------------
+INFO   | Soda Core 3.3.5
+ERROR  | Skipping unsupported check configuration: invalid_values | line=15,col=9 in check.yml | https://go.soda.io/metric_check_configurations
+WARNING| Counting invalid without valid or invalid specification does not make sense. ("invalid_count(company_name) = 0" @ line=14,col=7 in check.yml)
+INFO   | Using DefaultSampler
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 3/5 checks PASSED: 
+INFO   |     orders in postgresdb
+INFO   |       duplicate_count(order_id) = 0 [PASSED]
+INFO   |       missing_count(order_id) = 0 [PASSED]
+INFO   |     shippers in postgresdb
+INFO   |       invalid_count(company_name) = 0 [PASSED]
+INFO   | 1/5 checks WARNED: 
+INFO   |     orders in postgresdb
+INFO   |       missing_percent(ship_postal_code) warn when between 2% and 5% fail when > 5% [WARNED]
+INFO   |         check_value: 2.6
+INFO   |         row_count: 654
+INFO   |         missing_count: 17
+INFO   | 1/5 checks FAILED: 
+INFO   |     orders in postgresdb
+INFO   |       missing_count(customer_id) = 0 [FAILED]
+INFO   |         check_value: 1
+INFO   | 1 errors.
+INFO   | Oops! 1 error. 1 failure. 1 warning. 3 pass. 
+
+-----------------------------
+Test Log 2024-01-30 
+-----------------------------
+INFO   | Soda Core 3.3.5
+ERROR  | Skipping unsupported check configuration: invalid_values | line=15,col=9 in check.yml | https://go.soda.io/metric_check_configurations
+WARNING| Counting invalid without valid or invalid specification does not make sense. ("invalid_count(company_name) = 0" @ line=14,col=7 in check.yml)
+INFO   | Using DefaultSampler
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 3/5 checks PASSED: 
+INFO   |     orders in postgresdb
+INFO   |       duplicate_count(order_id) = 0 [PASSED]
+INFO   |       missing_count(order_id) = 0 [PASSED]
+INFO   |     shippers in postgresdb
+INFO   |       invalid_count(company_name) = 0 [PASSED]
+INFO   | 1/5 checks WARNED: 
+INFO   |     orders in postgresdb
+INFO   |       missing_percent(ship_postal_code) warn when between 2% and 5% fail when > 5% [WARNED]
+INFO   |         check_value: 2.6
+INFO   |         row_count: 654
+INFO   |         missing_count: 17
+INFO   | 1/5 checks FAILED: 
+INFO   |     orders in postgresdb
+INFO   |       missing_count(customer_id) = 0 [FAILED]
+INFO   |         check_value: 1
+INFO   | 1 errors.
+INFO   | Oops! 1 error. 1 failure. 1 warning. 3 pass. 
+
+-----------------------------
+Test Log 2024-01-08 
+-----------------------------
+INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 5/7 checks PASSED: 
+INFO   |     orders in postgresdb
+INFO   |       values in (customer_id) must exist in customers (customer_id) [PASSED]
+INFO   |       out_date_range = 0 [PASSED]
+INFO   |       duplicate_count(order_id) = 0 [PASSED]
+INFO   |       missing_count(order_id) = 0 [PASSED]
+INFO   |     shippers in postgresdb
+INFO   |       missing_count(company_name) = 0 [PASSED]
+INFO   | 1/7 checks WARNED: 
+INFO   |     orders in postgresdb
+INFO   |       missing_percent(ship_postal_code) warn when between 2% and 5% fail when > 5% [WARNED]
+INFO   |         check_value: 2.6
+INFO   |         row_count: 654
+INFO   |         missing_count: 17
+INFO   | 1/7 checks FAILED: 
+INFO   |     shippers in postgresdb
+INFO   |       invalid_count(company_name) = 0 [FAILED]
+INFO   |         check_value: 2
+INFO   | Oops! 1 failure. 1 warning. 0 errors. 5 pass. 
+
+-----------------------------
+Test Log 2024-01-09 
+-----------------------------
+INFO   | Soda Core 3.3.5
+INFO   | Using DefaultSampler
+INFO   | Using DefaultSampler
+INFO   | Scan summary:
+INFO   | 5/7 checks PASSED: 
+INFO   |     orders in postgresdb
+INFO   |       values in (customer_id) must exist in customers (customer_id) [PASSED]
+INFO   |       out_date_range = 0 [PASSED]
+INFO   |       duplicate_count(order_id) = 0 [PASSED]
+INFO   |       missing_count(order_id) = 0 [PASSED]
+INFO   |     shippers in postgresdb
+INFO   |       missing_count(company_name) = 0 [PASSED]
+INFO   | 1/7 checks WARNED: 
+INFO   |     orders in postgresdb
+INFO   |       missing_percent(ship_postal_code) warn when between 2% and 5% fail when > 5% [WARNED]
+INFO   |         check_value: 2.6
+INFO   |         row_count: 654
+INFO   |         missing_count: 17
+INFO   | 1/7 checks FAILED: 
+INFO   |     shippers in postgresdb
+INFO   |       invalid_count(company_name) = 0 [FAILED]
+INFO   |         check_value: 2
+INFO   | Oops! 1 failure. 1 warning. 0 errors. 5 pass. 
