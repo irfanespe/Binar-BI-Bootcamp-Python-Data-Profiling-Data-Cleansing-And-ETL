@@ -8,7 +8,7 @@
 1. sales data from ecommerce 
     
 ## Installation Needed
-before starting **Chapter 9**, it needs to prepare SodaCl package  
+before starting **Chapter 9**, it needs to prepare SodaCl package ([Installation guide](https://github.com/irfanespe/Binar-BI-Bootcamp-Python-Data-Profiling-Data-Cleansing-And-ETL/blob/master/installation%20package%20guide/Soda%20core%20.pdf))
 
 ## Learning Objects
 There are 2 learning objects provided in this github :
