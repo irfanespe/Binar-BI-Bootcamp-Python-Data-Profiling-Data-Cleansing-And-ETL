@@ -5,7 +5,7 @@
 2. [Sales_market dataset](https://github.com/irfanespe/Binar-BI-Bootcamp-Pandas-Data-Profiling-Data-Cleansing-And-ETL/tree/master/dataset/sales_market) is used for **exercise test case** per group
     
 ### Chapter 9
-1. sales data from ecommerce 
+1. [sales data from ecommerce](https://github.com/irfanespe/Binar-BI-Bootcamp-Python-Data-Profiling-Data-Cleansing-And-ETL/tree/master/dataset/data_on_ecommerce) 
     
 ## Installation Needed
 before starting **Chapter 9**, it needs to prepare SodaCl package ([Installation guide](https://github.com/irfanespe/Binar-BI-Bootcamp-Python-Data-Profiling-Data-Cleansing-And-ETL/blob/master/installation%20package%20guide/Soda%20core%20.pdf))
